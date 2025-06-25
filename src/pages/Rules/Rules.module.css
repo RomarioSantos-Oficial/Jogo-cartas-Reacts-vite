@@ -1,0 +1,200 @@
+.rulesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #E0E0E0;
+  background-color: #0D0D15;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #6A00F4 0%, #1A1A2E 100%);
+  border-radius: 1rem;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  font-family: 'Cinzel', serif;
+  color: #FFEE00;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  color: #00E0FF;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #FF4D00;
+}
+
+.ruleCard {
+  background-color: #1A1A2E;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.list {
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.componentCard {
+  background-color: #1A1A2E;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  border-top: 4px solid #C792EA;
+}
+
+.componentTitle {
+  color: #FF9500;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.sublist {
+  padding-left: 1rem;
+  line-height: 1.6;
+}
+
+.sublist li {
+  margin-bottom: 0.4rem;
+}
+
+.turnSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.stepNumber {
+  background-color: #FF4D00;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.stepContent {
+  background-color: #1A1A2E;
+  padding: 1rem 1.5rem;
+  border-radius: 0.8rem;
+  flex-grow: 1;
+}
+
+.stepContent h3 {
+  color: #A0E6FF;
+  margin-bottom: 0.5rem;
+}
+
+.comboTable {
+  background-color: #1A1A2E;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.comboHeader {
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+  background-color: #6A00F4;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.comboRow {
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+  padding: 1rem;
+  border-bottom: 1px solid #2D2D42;
+  align-items: center;
+}
+
+.elements {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.comboName {
+  font-weight: 600;
+  color: #FFEE00;
+}
+
+.comboEffect {
+  opacity: 0.9;
+}
+
+.victoryConditions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.victoryCard {
+  background-color: #1A1A2E;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  border: 2px solid #5E9E5E;
+  text-align: center;
+}
+
+.victoryCard h3 {
+  color: #00E0FF;
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #2D2D42;
+}
+
+.link {
+  color: #FF70F2;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Cores dos elementos */
+.fire { color: #FF4D00; }
+.water { color: #00A2FF; }
+.light { color: #FFEE00; }
+.dark { color: #9D50FF; }

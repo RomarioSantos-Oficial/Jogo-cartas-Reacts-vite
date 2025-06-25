@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: var(--white);
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+  background: linear-gradient(rgba(13, 13, 21, 0.9), rgba(26, 26, 46, 0.9));
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  border: 1px solid var(--gray1);
+}
+
+.title {
+  font-size: 3rem;
+  font-family: 'Cinzel', serif;
+  color: #C792EA; /* Arcano color - keeping as it's not in root vars */
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(199, 146, 234, 0.5);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  color: #00E0FF; /* Water secondary - keeping */
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #6A00F4; /* Trevas primary - keeping */
+  padding-bottom: 0.5rem;
+  font-family: 'Cinzel', serif;
+}
+
+.card {
+  background-color: var(--gray1);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.featureList {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.featureList li {
+  margin-bottom: 0.5rem;
+  list-style-type: none;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.featureList li:before {
+  content: "•";
+  color: var(--Blightblue);
+  position: absolute;
+  left: 0;
+}
+
+.stepCard {
+  background-color: var(--gray1);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--Bred);
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.stepCard:hover {
+  transform: translateY(-5px);
+}
+
+.stepTitle {
+  color: var(--yellow);
+  margin-bottom: 0.5rem;
+  font-family: 'Cinzel', serif;
+}
+
+.ctaSection {
+  text-align: center;
+  padding: 3rem 0;
+  background: rgba(26, 26, 46, 0.5);
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+.ctaTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'Cinzel', serif;
+}
+
+.ctaButton {
+  background-color: var(--Bred);
+  color: var(--white00);
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: all 0.3s;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+.ctaButton:hover {
+  background-color: #FF4D00; /* Fire primary */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 77, 0, 0.3);
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: var(--Blightblue);
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: 2px solid var(--Blightblue);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+.secondaryButton:hover {
+  background-color: rgba(41, 109, 240, 0.1);
+  color: var(--white00);
+}
+
+/* Elemental color classes for future use */
+.fireText { color: #FF4D00; }
+.waterText { color: #00A2FF; }
+.earthText { color: #5E9E5E; }
+.darkText { color: #6A00F4; }
+.lightText { color: #FFEE00; }
+.airText { color: #A0E6FF; }
+.electricText { color: #FF00E6; }
+.arcaneText { color: #C792EA; }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .ctaButton, .secondaryButton {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Menu bars/sections */
+
+  --gray1: #1A1A2E;
+
+  /* Main text */
+
+  --white: #E0E0E0;
+
+  /* Website background */
+
+  --black1: #0D0D15;
+
+
+
+  --red1: #CD373A;
+  --yellow: #EABA40;
+  --blue: #0C266D;
+  --green: #00BF63;
+  --white00: #fff;
+  --orange: #FFA500;
+
+  /* button colors */
+
+  --Blightblue: #296DF0;
+  --Bred: #CD373A;
+
+}
+
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--black1);
+  color: var(--white);
+}
