@@ -1,6 +1,6 @@
 # **Elementalis: O Despertar dos Éteres**  
 
-![Banner](https://via.placeholder.com/1200x400/0D0D15/FFFFFF?text=Elementalis)  
+![Banner](/public/Logo.png)  
 *Um jogo de estratégia elemental onde criaturas míticas e deuses antigos colidem em batalhas épicas!*  
 
 ---
