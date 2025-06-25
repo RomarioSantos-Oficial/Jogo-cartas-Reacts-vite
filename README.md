@@ -90,14 +90,3 @@ npm start
 ```  
 
 **Requisitos:** Node.js 16+  
-
----
-
-Este README.md inclui:  
-- Descrição clara do jogo  
-- Regras básicas visuais  
-- Links de download e contato  
-- Seção para contribuidores  
-- Licença e informações técnicas  
-
-Quer adicionar algo específico (ex: vídeo tutorial, screenshots)? Posso sugerir formatos!
