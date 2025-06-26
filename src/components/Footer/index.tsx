@@ -1,40 +1,88 @@
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
-import { IoMailOutline, IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoYoutube, IoLogoLinkedin, IoLogoGithub } from "react-icons/io5";
+import { 
+  IoMailOutline, 
+  IoLogoFacebook, 
+  IoLogoInstagram, 
+  IoLogoTwitter, 
+  IoLogoYoutube, 
+  IoLogoLinkedin, 
+  IoLogoGithub 
+} from "react-icons/io5";
 
-function Footer() {
-    return (
-        <footer className={styles.footer}>
-            <div className={styles.topSection}>
-                <div className={styles.link2}>
-                    <h2>Links úteis</h2>
-                    <Link to="/ajudas">Central de Ajudas</Link >
-                    <Link to="/regras">Regras de Apostas</Link >
-                    <Link to="/termos">Termos e Condições</Link>
-                    <Link to="/políticasdejogos">Políticas de Jogos</Link >
-                    <Link to="/segurança">Segurança</Link >
-                    <Link to="/meiosdepagamento">Meios de pagamento</Link >
-                    <Link to="/políticasdePrivacidade">Políticas de Privacidade</Link >
-                    {/* <Link to="/redessociais">Redes sociais</Link > */}
-                </div>
-                <div className={styles.aboutUs}>
-                    <h2>Sobre nós</h2>
-                    <p>Bem-vindo ao Sorte em Perder, o seu destino online definitivo para apostas e jogos de cassino! No nosso site, oferecemos uma experiência emocionante e segura para todos os entusiastas de apostas. Com uma vasta seleção de jogos de cassino, desde clássicos como blackjack e roleta até as mais recentes máquinas caça-níqueis, garantimos diversão para todos os gostos. Nossa plataforma é fácil de usar e está disponível 24 horas por dia, permitindo que você jogue quando e onde quiser. Além disso, oferecemos promoções generosas e bônus exclusivos para nossos jogadores. No Sorte em Perder, acreditamos que a sorte está sempre ao seu lado!</p>
-                </div>
+export function Footer() {
+  const currentYear = new Date().getFullYear();
+  
+  const linkColumns = [
+    [
+      { to: "/ajudas", text: "Central de Ajuda" },
+      { to: "/rules", text: "Regras do Jogo" },
+      { to: "/termos", text: "Termos e Condições" }
+    ],
+    [
+      { to: "/políticasdejogos", text: "Políticas de Jogos" },
+      { to: "/segurança", text: "Segurança" },
+      { to: "/meiosdepagamento", text: "Meios de Pagamento" },
+      { to: "/políticasdePrivacidade", text: "Política de Privacidade" }
+    ]
+  ];
+
+  const socialLinks = [
+    { icon: <IoMailOutline />, url: "mailto:romariodevs@gmail.com" },
+    { icon: <IoLogoFacebook />, url: "https://www.facebook.com/profile.php?id=61559557505574" },
+    { icon: <IoLogoInstagram />, url: "https://www.instagram.com/euoromario/" },
+    { icon: <IoLogoTwitter />, url: "https://x.com/RomarioSant0s" },
+    { icon: <IoLogoYoutube />, url: "https://www.youtube.com/@romariosantos3835" },
+    { icon: <IoLogoLinkedin />, url: "https://www.linkedin.com/in/euoromario/" },
+    { icon: <IoLogoGithub />, url: "https://github.com/RomarioDevs" }
+  ];
+
+  return (
+    <footer className={styles.footer}>
+      <div className={styles.contentWrapper}>
+        <div className={styles.linksContainer}>
+          {linkColumns.map((column, columnIndex) => (
+            <div key={columnIndex} className={styles.linkColumn}>
+              {column.map((link, linkIndex) => (
+                <Link key={linkIndex} to={link.to} className={styles.footerLink}>
+                  {link.text}
+                </Link>
+              ))}
             </div>
-            <div className={styles.socias}>
-                <div className={styles.icons1}>
-                    <a href="mailto:romariodevs@gmail.com"><IoMailOutline className={styles.icon2} /></a>
-                    <a href="https://www.facebook.com/profile.php?id=61559557505574" target="_blank" rel="noopener noreferrer"><IoLogoFacebook className={styles.icon2} /></a>
-                    <a href="https://www.instagram.com/euoromario/" target="_blank" rel="noopener noreferrer"><IoLogoInstagram className={styles.icon2} /></a>
-                    <a href="https://x.com/RomarioSant0s" target="_blank" rel="noopener noreferrer"> <IoLogoTwitter className={styles.icon2} /></a>
-                    <a href="https://www.youtube.com/@romariosantos3835" target="_blank" rel="noopener noreferrer"> <IoLogoYoutube className={styles.icon2} /></a>
-                    <a href="https://www.linkedin.com/in/euoromario/" target="_blank" rel="noopener noreferrer"><IoLogoLinkedin className={styles.icon2} /></a>
-                    <a href="https://github.com/RomarioDevs" target="_blank" rel="noopener noreferrer"> <IoLogoGithub className={styles.icon2} /></a>
-                </div>
-            </div>
-        </footer>
-    )
+          ))}
+          
+          <div className={styles.aboutSection}>
+            <h2>Sobre Nós</h2>
+            <p>
+              Bem-vindo ao Sorte em Perder, o seu destino online definitivo para apostas e jogos de cassino! 
+              Oferecemos uma experiência emocionante e segura com uma vasta seleção de jogos.
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.socialSection}>
+          <div className={styles.socialIcons}>
+            {socialLinks.map((social, index) => (
+              <a 
+                key={index}
+                href={social.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label={`Link para ${social.url.split('//')[1]?.split('/')[0]}`}
+                className={styles.socialIcon}
+              >
+                {social.icon}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.copyright}>
+        <p>&copy; {currentYear} Sorte em Perder. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;

@@ -1,68 +1,111 @@
 .footer {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    display: flex;
+  font-family: "Ubuntu", sans-serif;
+  background-color: var(--gray1);
+  color: var(--white);
+  padding: 2rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contentWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.linksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.linkColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-width: 150px;
+}
+
+.footerLink {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--white3);
+  transition: color 0.3s ease;
+  padding: 0.3rem 0;
+}
+
+.footerLink:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.aboutSection {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+.aboutSection h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.aboutSection p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--white3);
+}
+
+.socialSection {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.socialIcon {
+  color: var(--gray2);
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  color: var(--gray3);
+  transform: translateY(-3px);
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--gray3);
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .linksContainer {
     flex-direction: column;
-    background-color: var(--green);
-    padding: 20px;
-}
-
-.topSection {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.link2,
-.aboutUs {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.link2 h2,
-.aboutUs h2 {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    color: var(--gray2);
-}
-
-.link2 a,
-.aboutUs p {
-    font-size: 0.6rem;
-    margin: 0.252rem;
-    text-decoration: none;
-    color: var(--gray2);
-}
-.link2 a{
-    transition: 0.5s;
-}
-
-.link2 a:hover {
-    color: var(--gray3);
-}
-
-.socias {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-}
-
-.icons1 {
-    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .linkColumn {
+    min-width: 100%;
+  }
+  
+  .aboutSection {
+    max-width: 100%;
+  }
+  
+  .socialIcons {
     gap: 1rem;
-    font-size: 2rem;
-}
-
-.icon2 {
-    cursor: pointer;
-    color: var(--gray2);
-    transition: 0.5s;
-}
-
-.icon2:hover {
-    color: var(--gray3);
+  }
 }

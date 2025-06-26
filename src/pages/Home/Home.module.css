@@ -105,41 +105,41 @@
   font-family: 'Cinzel', serif;
 }
 
-.ctaButton {
-  background-color: var(--Bred);
-  color: var(--white00);
+.ctaButton,
+.secondaryButton {
+  text-decoration: none;        /* remove sublinhado */
+  display: inline-block;        /* permite padding funcionar como botão */
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 0.5rem;
   padding: 1rem 2rem;
   font-size: 1.2rem;
-  border: none;
-  border-radius: 0.5rem;
+  transition: all 0.3s ease;
   cursor: pointer;
   margin-right: 1rem;
-  transition: all 0.3s;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
+}
+
+.ctaButton {
+background-color: var(--Bred);
+  color: var(--white00);
+  border: none;
 }
 
 .ctaButton:hover {
-  background-color: #FF4D00; /* Fire primary */
-  transform: translateY(-2px);
+   background-color: #FF4D00;
   box-shadow: 0 4px 12px rgba(255, 77, 0, 0.3);
+  transform: translateY(-2px);
 }
 
 .secondaryButton {
-  background-color: transparent;
+   background-color: transparent;
   color: var(--Blightblue);
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
   border: 2px solid var(--Blightblue);
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: all 0.3s;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
 }
 
 .secondaryButton:hover {
-  background-color: rgba(41, 109, 240, 0.1);
+ background-color: rgba(41, 109, 240, 0.1);
   color: var(--white00);
 }
 

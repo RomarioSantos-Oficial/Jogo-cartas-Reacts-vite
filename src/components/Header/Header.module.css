@@ -1,100 +1,311 @@
 .header {
+    /* Mantenha estas propriedades */
     font-family: "Ubuntu Mono", monospace;
     font-weight: 500;
     font-style: normal;
-    background-color: var(--green);
+    background-color: var(--gray1);
     width: 100%;
-    gap: 1rem;
-    height: 4.5rem;
+    
+    /* Ajuste estas propriedades para o tamanho */
+    height: auto;               /* Altura automática */
+    min-height: 50px;          /* Altura mínima (pode usar px ou rem) */
+    padding: 0.1rem 2rem;        /* Espaçamento interno (top/bottom left/right) */
+    
+    /* Mantenha o resto */
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
-    min-width: 60vh;
+    justify-content: space-between;
+    gap: 1rem;
+    position: relative;
+    z-index: 100;
+    box-sizing: border-box;
 }
 
-
-
 .header a {
-    align-items: center;
-    font-size: 2rem;
-    color: var(--gray2);
+    font-size: clamp(1rem, 2vw, 1.8rem);
+    color: var(--white2);
     text-decoration: none;
-    padding: 1.2rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    transition: .5s ease;
+    transition: all 0.3s ease;
+    letter-spacing: -1px;
+    white-space: nowrap;
 }
 
 .header a:hover {
-    color: var(--gray3);
+    color: var(--white1);
+    transform: translateY(-2px);
+}
+
+.logoLink {
+    display: flex;
+    align-items: center;
 }
 
 .logo {
-    min-height: 20%;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
     height: 3.5rem;
+    width: auto;
+    cursor: pointer;
     transition: transform 0.3s ease;
 }
 
 .logo:hover {
-    transform: scale(1.1); /* Scale the logo up by 20% on hover */
+    transform: scale(1.1);
+}
+
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    flex: 1;
+    margin: 0 1rem;
 }
 
 .buscar1 {
     display: flex;
-    height: 40%;
     align-items: center;
-    justify-content: center;
+    gap: 1.5rem;
 }
 
 .icons {
     display: flex;
-    color: var(--gray2);
-  
+    color: var(--white);
+    gap: 0.5rem;
+    position: relative;
 }
 
 .icon {
     padding: 0.3rem;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     cursor: pointer;
-    transition: .5s;
+    transition: all 0.3s ease;
 }
 
 .icon:hover {
-    color: var(--gray3);
+    color: var(--white1);
+    transform: rotate(15deg);
 }
 
 .buttonsHome {
     display: flex;
     align-items: center;
-    padding: 1rem;
+    gap: 0.5rem;
 }
 
 .buttonsHome .entrar,
 .buttonsHome .registar {
-    color: var(--gray2);
+    color: var(--white);
     width: 160px;
-    height: 40px;
-    font-size: 1rem;
+    height: 35px;
+    font-size: 0.9rem;
     font-weight: bold;
     border-radius: 8px;
-    background-color: var(--yellow);
+    background-color: var(--gray2);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    margin: .15rem;
-    transition: 0.5s;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
 }
 
 .buttonsHome .entrar:hover {
-    background-color: var(--Blightblue);
+    background-color: var(--gray3);
     color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .buttonsHome .registar:hover {
-    background-color: var(--Bred);
+    background-color: var(--gray3);
     color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu de Configuração */
+.gearWrapper {
+    position: relative;
+}
+
+.configMenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--gray1);
+    border: 1px solid var(--gray3);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 1000;
+    min-width: 150px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.configMenu button {
+    background: none;
+    border: none;
+    color: var(--white00);
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: left;
+    padding: 0.5rem 0.8rem;
+    transition: all 0.3s;
+    border-radius: 0.25rem;
+}
+
+.configMenu button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--yellow);
+}
+
+/* Input de Presente */
+.giftWrapper {
+    position: relative;
+}
+
+.giftInputBox {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray1);
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    z-index: 1000;
+    min-width: 220px;
+    gap: 0.8rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.giftInputBox input {
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: var(--black1);
+    color: var(--white00);
+    outline: none;
+    transition: all 0.3s;
+}
+
+.giftInputBox input:focus {
+    box-shadow: 0 0 0 2px var(--yellow);
+}
+
+.giftInputBox button {
+    background-color: var(--yellow);
+    border: none;
+    padding: 0.6rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: var(--black1);
+}
+
+.giftInputBox button:hover {
+    background-color: var(--Blightblue);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .header {
+        padding: 0.5rem 1rem;
+    }
+    
+    .home {
+        gap: 0.3rem;
+        margin: 0 0.5rem;
+    }
+    
+    .header a {
+        padding: 0.5rem;
+        font-size: 1.4rem;
+    }
+    
+    .buscar1 {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+    
+    .home {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+    
+    .buscar1 {
+        order: 2;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .header a {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+    
+    .logo {
+        height: 3rem;
+    }
+    
+    .buttonsHome {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .buttonsHome .entrar,
+    .buttonsHome .registar {
+        width: 140px;
+    }
+    
+    .configMenu,
+    .giftInputBox {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 480px) {
+    .home {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .header a {
+        font-size: 1.1rem;
+        padding: 0.3rem;
+    }
+    
+    .buttonsHome .entrar,
+    .buttonsHome .registar {
+        width: 120px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+    
+    .icon {
+        font-size: 1.8rem;
+    }
 }

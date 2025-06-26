@@ -1,14 +1,11 @@
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 
-// Página Home completa
 const Home = () => {
   return (
-    <div className={styles.fullPage}> {/* Container principal */}
-
-      {/* Conteúdo específico da Home */}
+    <div className={styles.fullPage}>
       <main className={styles.mainContent}>
-        {/* Hero Section */}
+        {/* Hero */}
         <section className={styles.hero}>
           <h1 className={styles.title}>Elementalis: O Despertar dos Éteres</h1>
           <p className={styles.subtitle}>
@@ -16,30 +13,35 @@ const Home = () => {
           </p>
         </section>
 
-        {/* Game Description */}
+        {/* Sobre o jogo */}
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Sobre o Jogo</h2>
           <div className={styles.card}>
             <p>
-              Um jogo de estratégia por turnos onde você controla <strong>criaturas místicas</strong>, 
-              <strong>deuses antigos</strong> e <strong>magias elementais</strong> em batalhas épicas.
+              Um jogo de estratégia por turnos com <strong>criaturas místicas</strong>,
+              <strong> deuses antigos</strong> e <strong> magias elementais</strong>.
             </p>
             <ul className={styles.featureList}>
-              <li>8 elementos únicos com sinergias e fraquezas</li>
-              <li>Sistema de terrenos dinâmicos</li>
-              <li>Criaturas híbridas e combos estratégicos</li>
-              <li>Mais de 100 cartas colecionáveis</li>
+              {[
+                "8 elementos únicos com sinergias e fraquezas",
+                "Sistema de terrenos dinâmicos",
+                "Criaturas híbridas e combos estratégicos",
+                "Mais de 100 cartas colecionáveis"
+              ].map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
             </ul>
           </div>
         </section>
 
-        {/* Call to Action */}
+        {/* Ações */}
         <section className={styles.ctaSection}>
-          <Link to="/login" className={styles.ctaButton}>Jogar Agora</Link>
-          <Link to="/rules" className={styles.secondaryButton}>Aprenda as Regras</Link>
+          <div>
+            <Link to="/login" className={styles.ctaButton}>Jogar Agora</Link>
+            <Link to="/rules" className={styles.secondaryButton}>Aprenda as Regras</Link>
+          </div>
         </section>
       </main>
-
     </div>
   );
 };

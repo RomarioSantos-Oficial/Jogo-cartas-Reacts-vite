@@ -16,7 +16,8 @@
   /* Main text */
 
   --white: #E0E0E0;
-
+  --white1: #f5f5f5;
+  --white2: #b9b8b8;
   /* Website background */
 
   --black1: #0D0D15;
@@ -27,13 +28,14 @@
   --yellow: #EABA40;
   --blue: #0C266D;
   --green: #00BF63;
-  --white00: #fff;
   --orange: #FFA500;
 
   /* button colors */
 
   --Blightblue: #296DF0;
   --Bred: #CD373A;
+  --gray2: #4d4443;
+  --gray3:#695d5c;
 
 }
 
@@ -45,7 +47,8 @@
   user-select: none;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   background-color: var(--black1);
   color: var(--white);
