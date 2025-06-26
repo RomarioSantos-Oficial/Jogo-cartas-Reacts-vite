@@ -90,3 +90,9 @@ npm start
 ```  
 
 **Requisitos:** Node.js 16+  
+
+
+**Link para Teste** 
+
+
+[link](https://jogo-cartas-reacts-vite.vercel.app/)
