@@ -79,7 +79,7 @@ export function Footer() {
       </div>
 
       <div className={styles.copyright}>
-        <p>&copy; {currentYear} Sorte em Perder. Todos os direitos reservados.</p>
+        <p>&copy; {currentYear} Todos os direitos reservados.</p>
       </div>
     </footer>
   );
